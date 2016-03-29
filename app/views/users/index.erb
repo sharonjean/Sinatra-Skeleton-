@@ -1,0 +1,14 @@
+<h2>here's your page.</h2>
+<h1>
+  <% if current_user %>
+    <%= current_user.email %>
+    <%= current_user.name %>
+  <% end %>
+</h1>
+
+<p>existing users.</p>
+
+<% @users.each do |user| %>
+  <h1><%= user.name %></h1>
+  <br>
+<% end %>
