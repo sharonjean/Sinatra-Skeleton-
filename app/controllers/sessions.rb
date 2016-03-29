@@ -13,6 +13,6 @@ post '/sessions' do
 end
 
 delete '/sessions/:id' do
-  session[:id] = nil
+  session.clear
   redirect '/sessions/new'
 end
